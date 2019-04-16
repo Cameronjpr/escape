@@ -1,0 +1,110 @@
+body {
+    background-color: white;
+    color: black;
+    font-size: 1.5em;
+}
+
+.button-wrapper {
+    display: grid;
+    grid-template-columns: [left] 1fr [right] 1fr;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+    padding-left: 5px;
+    vertical-align: bottom;
+    outline: none;
+}
+
+.btn1 {
+    grid-row: input;
+}
+
+.btn2 {
+    grid-row: input;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+}
+
+.selected::before {
+    content: "\203A \0020";
+}
+
+.selected::after {
+    content: "\0020 \2039";
+}
+
+.main-text-area {
+    border: 2px solid black;
+    border-radius: 3px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 1em;
+    height: 80vh;
+    display: grid;
+    grid-template-rows: [story] 4fr [input] 1fr;
+}
+
+.text {
+    grid-row: story;
+    padding: 1.5em;
+    text-align: center;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 414px) {
+    body {
+        font-size: 1.1em;
+    }
+    .main-text-area {
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 80vh;
+        grid-template-rows: [story] 4fr [input] 1fr;
+    }
+
+    .button-wrapper {
+        display: grid;
+        grid-template-rows: [top] 1fr [bottom] 1fr;
+        grid-template-columns: [main] 1fr;
+    }
+
+    .btn1 { grid-row: top; grid-column: main }
+    .btn2 { grid-row: bottom; grid-column: main }
+
+    .selected {
+        background-color: inherit;
+        color: black;
+    }
+
+    .selected::before {
+        content: "";
+    }
+    
+    .selected::after {
+        content: "";
+    }
+
+    .mobile-selection {
+        background-color: black;
+        color: white;
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .2s ease-in;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+    }
+
+}
+  
+/* Desktops and laptops ----------- */
+  
+@media only screen and (min-width : 960px) {
+
+}
