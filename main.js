@@ -16,6 +16,13 @@ $(document).ready(function() {
         right: false,
     }
 
+    const listener = () => {
+        switch (index) {
+            case 3: 
+                
+        }
+    }
+
     $(document).keydown(function(event){
     var keycode = event.which;
     if(keycode == 13 || keycode == 32){ 
@@ -128,7 +135,7 @@ $(document).ready(function() {
             text: `You squeeze through the gap and find yourself inside the cabin of a long wooden boat, which is filled with a dozen more wooden crates. Your crate had protected you from the foul stench of rotting food which now fills your lungs. You scramble away from the sailor, who tries feebly to pull you back.${linebreak}You dash across the room, ducking out of sight, towards a staircase leading to a sunlit deck.`,
             left: "Run up to the deck",
             right: "Hide",
-            next: [14, 15]
+            next: [14, 23]
         },
         11: {
             text: `The sailor explains that you've been in the box for about a week. You ask if it was him who put you there. He insists that it wasn't -- that the order came from the captain of the ship. Bloody yes-men.${linebreak}You notice that the sailor has a small knife dangling by his side.${linebreak}You're not sure if he's someone you can trust, despite being the one who got you out of the crate...`,
@@ -188,7 +195,7 @@ $(document).ready(function() {
             text: `You strip the sailor of his clothes and put them on yourself. The fit is snug, but better than you had anticipated.${linebreak}You pick up his knife. It's heavy, and the blade is very sharp. In testing this, you draw some of your own blood.${linebreak}Idiot.`,
             left: `Make your way to the deck`,
             right: `Slit your own throat...`,
-            next: [19, 605]
+            next: [14, 605]
         },
         21: {
             text: `You stride towards the nearest sailor. Confidence is key. Act like you belong. ${linebreak}You begin to introduce yourself, but are soon silenced by the noise from a growing crowd around you. You look around -- five or six sailors, each carrying a long sword.`,
@@ -202,17 +209,17 @@ $(document).ready(function() {
             right: `Martin?`,
             next: [24, 25]
         },
+        23: {
+            text: `You hide as well as you can, but the lingering stench causes you to cough and splutter, revealing your position to the sailor.${linebreak}Oh well, you had a good run.`,
+            left: `Aaaaaarrrrgh!`,
+            right: `Aaaaargh!!!`,
+            next: [602, 602]
+        },
         24: {
             text: `You and the sailor devise a way off the boat. You'll sneak up onto the deck, get into position, then unleash hell on the unsuspecting crew.`,
             left: `Okay`,
             right: `Sure`,
             next: [26, 26]
-        },
-        25: {
-            text: `After a few moments have passed, you both make your way to a staircase leading up to the deck. It suddenly crosses your mind that you don't even know the name of this savior sailor. This most brave of rescuers with whom you may shortly perish.${linebreak}I'm John, he explains. You don't really care anyway and forget his name almost immediately.`,
-            left: `On with the plan!`,
-            right: `On with the plan!`,
-            next: [19, 20]
         },
         25: {
             text: `Yes -- Martin. He's a young lad, dense as a rock. Thought this was the ferry to Guernsey.${linebreak}He's a buffoon but he's <em>our</em> buffoon. Quite literally, too, ever since the cap'n declared him cargo.`,
@@ -249,6 +256,12 @@ $(document).ready(function() {
             left: `Back home...`,
             right: `Onwards! The seas are ours!`,
             next: [701, 702]
+        },
+        31: {
+            text: `After a few moments have passed, you both make your way to a staircase leading up to the deck. It suddenly crosses your mind that you don't even know the name of this savior sailor. This most brave of rescuers with whom you may shortly perish.${linebreak}I'm John, he explains. You don't really care anyway and forget his name almost immediately.`,
+            left: `On with the plan!`,
+            right: `On with the plan!`,
+            next: [26, 26]
         },
         601: {
             text: `You died of a broken spirit.${linebreak}:(`,
@@ -313,11 +326,3 @@ $(document).ready(function() {
     forks.update(index)
 
 });
-
-// x:
-//     {
-//         text: ``,
-//         left: "",
-//         right: "",
-//         next: [, ]
-//     }
