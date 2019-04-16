@@ -237,7 +237,7 @@ $(document).ready(function() {
             text: `You hold your position until all of the pirates have their backs turned to you. This is the moment. You and the sailor -- what was his name? -- turn to one another. Are you ready?`,
             left: `Give them HELL!`,
             right: `I'm too scared!`,
-            next: [28, 28]
+            next: [28, 32]
         },
         28: {
             text: `You and the sailor bloke launch into a frenzy of left hooks and dagger blows, punching and cutting your way through six of the beardiest, hardest, meanest pirates you ever did see. The sailor is a skilled fighter (<strong>PLOT ARMOUR</strong>), and the two of you are soon surrounded by six bodies and a cowering Martin.`,
@@ -262,6 +262,12 @@ $(document).ready(function() {
             left: `On with the plan!`,
             right: `On with the plan!`,
             next: [26, 26]
+        },
+        32: {
+            text: `Five minutes pass. Incredibly, nobody on-board has spotted the two of you. The sailor gives you an urgent look -- <em>now is the time!</em>${linebreak}Are you ready?`,
+            left: `Yes! Give them HELL!`,
+            right: `This is all too much!`,
+            next: [28, 605]
         },
         601: {
             text: `You died of a broken spirit.${linebreak}:(`,
@@ -288,7 +294,7 @@ $(document).ready(function() {
             next: [0, 999]
         },
         605: {
-            text: `You died.${linebreak}You killed yourself.${linebreak}That's it.${linebreak}${linebreak}You <em>do</em> realise that this is a game, right?`,
+            text: `You died.${linebreak}You killed yourself with your own knife.${linebreak}That's it.${linebreak}${linebreak}You <em>do</em> realise that this is a game, right?`,
             left: "Retry",
             right: "Who made this stupid game?",
             next: [0, 999]
