@@ -1,6 +1,6 @@
 body {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     font-size: 1.5em;
 }
 
@@ -10,8 +10,8 @@ body {
 }
 
 .btn {
-    background-color: white;
-    color: black;
+    background-color: inherit;
+    color: inherit;
     border: none;
     font-size: 16px;
     padding: 5px;
@@ -42,10 +42,8 @@ body {
 }
 
 .main-text-area {
-    border: 2px solid black;
-    border-radius: 3px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 1em;
     height: 80vh;
     display: grid;
@@ -106,5 +104,12 @@ body {
 /* Desktops and laptops ----------- */
   
 @media only screen and (min-width : 960px) {
-
+    .main-text-area {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 1em;
+        height: 80vh;
+        display: grid;
+        grid-template-rows: [story] 4fr [input] 1fr;
+    }
 }

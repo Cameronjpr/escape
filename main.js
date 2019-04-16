@@ -49,11 +49,13 @@ $(document).ready(function() {
     $(leftBtn).click(function(event){
         index = forks[index].next[0]
         forks.update(index)
+        forkEventListener()
     });
 
     $(rightBtn).click(function(event){
         index = forks[index].next[1]
         forks.update(index)
+        forkEventListener()
     });
 
     $(leftBtn).hover(function(event){
@@ -63,6 +65,24 @@ $(document).ready(function() {
     $(rightBtn).hover(function(event){
         $(rightBtn).toggleClass('selected');
     });
+
+    const forkEventListener = () => {
+        if (index === 3) {
+            document.body.style.backgroundColor = "white"
+            document.body.style.color = "black"
+        }
+        else if (index > 600 && index < 700) {
+            document.body.style.backgroundColor = "#990000"
+            document.body.style.color = "white"
+        }
+        // else if (index > 700 && index < 800) {
+
+        // }
+        else if (index < 3 || index === 999){
+            document.body.style.backgroundColor = "black"
+            document.body.style.color = "white"
+        }
+    }
 
     const forks = {
         update: function(i) {
