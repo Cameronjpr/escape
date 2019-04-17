@@ -42,8 +42,8 @@ body {
 }
 
 .main-text-area {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 0%;
+    margin-right: 20%;
     margin-top: 1em;
     height: 80vh;
     display: grid;
@@ -79,7 +79,7 @@ body {
 
     .selected {
         background-color: inherit;
-        color: black;
+        color: inherit;
     }
 
     .selected::before {
@@ -91,8 +91,8 @@ body {
     }
 
     .mobile-selection {
-        background-color: black;
-        color: white;
+        background-color: inherit;
+        color: inherit;
         -moz-transition: all .2s ease-in;
         -o-transition: all .2s ease-in;
         -webkit-transition: all .2s ease-in;
